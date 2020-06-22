@@ -3,10 +3,10 @@ package com.Lechowicz;
 import java.util.*;
 
 public class RecentlyUsedList<T> {
-    private Integer size;
+    private int size;
     private List<T> recentlyElements;
 
-    public RecentlyUsedList(Integer size){
+    public RecentlyUsedList(int size){
         this.size = size;
         recentlyElements = new LinkedList<>();
 
@@ -18,7 +18,7 @@ public class RecentlyUsedList<T> {
         }
         recentlyElements.add(0, newItem);
         if(recentlyElements.size() > size){
-            recentlyElements.remove(size - 1);
+            recentlyElements.remove(size);
         }
     }
 
